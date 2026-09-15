@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    
+   
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="favicon.svg" alt="Logo PokéPonto" width="30" height="30" class="d-inline-block align-text-top me-2">
+      PokéPonto TCG
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacao" aria-controls="menuNavegacao" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  
+    <div class="collapse navbar-collapse" id="menuNavegacao">
+      
+   
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="menuProdutos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Produtos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="menuProdutos">
+            <li><a class="dropdown-item" href="#">Cartas Soltas</a></li>
+            <li><a class="dropdown-item" href="#">Theme Decks</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Acessórios</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Promoções</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Presentes</a>
+        </li>
+      </ul>
+
+      <form class="d-flex mx-auto w-50 mb-2 mb-lg-0">
+        <input class="form-control me-2" type="search" placeholder="Buscar cartas, raridades, decks..." aria-label="Buscar">
+        <button class="btn btn-outline-danger" type="submit">Buscar</button>
+      </form>
+
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Entrar / Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" href="#">
+            🛒 Carrinho 
+            <span class="badge rounded-pill bg-danger ms-2">0</span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
