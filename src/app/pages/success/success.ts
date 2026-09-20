@@ -3,8 +3,8 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   imports: [RouterLink],
-  selector: 'app-checkout',
-  styleUrl: './checkout.css',
-  templateUrl: './checkout.html',
+  selector: 'app-success',
+  styleUrl: './success.css',
+  templateUrl: './success.html',
 })
-export class Checkout {}
+export class Success {}
