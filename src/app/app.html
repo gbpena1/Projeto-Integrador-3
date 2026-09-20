@@ -1,59 +1,46 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    
-   
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="favicon.svg" alt="Logo PokéPonto" width="30" height="30" class="d-inline-block align-text-top me-2">
-      PokéPonto TCG
-    </a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacao" aria-controls="menuNavegacao" aria-expanded="false" aria-label="Abrir menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-  
-    <div class="collapse navbar-collapse" id="menuNavegacao">
+<div class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-white" routerLink="/" style="cursor: pointer;">
+        PokéPonto TCG
+      </a>
       
-   
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="menuProdutos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Produtos
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="menuProdutos">
-            <li><a class="dropdown-item" href="#">Cartas Soltas</a></li>
-            <li><a class="dropdown-item" href="#">Theme Decks</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Acessórios</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Promoções</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Presentes</a>
-        </li>
-      </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <form class="d-flex mx-auto w-50 mb-2 mb-lg-0">
-        <input class="form-control me-2" type="search" placeholder="Buscar cartas, raridades, decks..." aria-label="Buscar">
-        <button class="btn btn-outline-danger" type="submit">Buscar</button>
-      </form>
-
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Entrar / Perfil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="#">
-            🛒 Carrinho 
-            <span class="badge rounded-pill bg-danger ms-2">0</span>
-          </a>
-        </li>
-      </ul>
-
+      <div class="collapse navbar-collapse d-flex justify-content-between align-items-center" id="navbarContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-white" href="#">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Promoções</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Presentes</a></li>
+        </ul>
+        
+        <form class="d-flex w-50 mx-3">
+          <input class="form-control rounded-0 border-0" type="search" placeholder="Buscar cartas, raridades, decks...">
+          <button class="btn btn-outline-danger rounded-0 text-white" type="submit">Buscar</button>
+        </form>
+        
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item me-3"><a class="nav-link text-white" href="#">Entrar / Perfil</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-white d-flex align-items-center" routerLink="/cart" style="cursor: pointer;">
+              Carrinho <span class="badge bg-danger rounded-circle ms-2">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<router-outlet></router-outlet>
+  <main class="flex-grow-1 container">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="bg-dark text-light text-center py-4 mt-auto">
+    <div class="container">
+      <p>© 2026 PokéPonto TCG.</p>
+      <p>Projeto Integrador 3</p>
+    </div>
+  </footer>
+</div>
