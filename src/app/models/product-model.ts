@@ -1,32 +1,29 @@
-// Superclasse
+// SUPER classe 
 export interface Product {
   id: number;
-  nome: string;
-  descricao: string;
-  preco: number;
-  categoria: string;
-  imagemUrl: string;
-  tipo: 'CARTA' | 'PACOTE' | 'ACESSORIO';
+  name: string;
+  price: number;
+  stock: number;
+  imageUrl: string;
+  type: 'CARD' | 'PACK' | 'ACCESSORY';
 }
 
-// Subclasses para herança
-export interface CartaAvulsa extends Product {
-    tipo: 'CARTA';
-    elementoCategoria: string;
-    raridade: string;
-    estadoConservacao: string;
-    idioma: string;
+// SUB classes 
+export interface SingleCard extends Product {
+  type: 'CARD';
+  elementCategory: string;
+  rarity: string;
+  condition: string;
+  language: string;
 }
-
-export interface Pacote extends Product {
-    tipo: 'PACOTE';
-    quantidadeCartas: number;
-    colecao: string;
-    tipoSelado: string;
+export interface Pack extends Product {
+  type: 'PACK';
+  collection: string;
+  sealedType: string;
+  cardCount: number;
 }
-
-export interface Acessorio extends Product {
-    tipo: 'ACESSORIO';
-    marca: string;
-    tipoAcessorio: string;
+export interface Accessory extends Product {
+  type: 'ACCESSORY';
+  brand: string;
+  accessoryType: string;
 }
